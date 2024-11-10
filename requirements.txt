@@ -1,0 +1,6 @@
+streamlit
+fastai
+pillow
+altair
+pandas
+gdown
