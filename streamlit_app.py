@@ -94,7 +94,7 @@ IMAGE_TYPES = ["png", "jpg"]
 
 EXTERNAL_DEPENDENCIES = {
     "song_sparrow_model.pkl": {
-        "url": "https://drive.google.com/file/d/15okGOxNxcJA_vIfMXT6j4ZYftBZBuJLQ/view?usp=sharing",
+        "url": "https://www.dropbox.com/scl/fi/0q2d59knsgmcuuwmc20xl/song_sparrow_model.pkl?rlkey=0vhfq8j658porec1s3lhnfmn4&st=6lhhmq2c&dl=1",
         "size": 87516604
     }
 }
