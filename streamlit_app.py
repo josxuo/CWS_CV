@@ -9,14 +9,14 @@ import gdown
 from PIL import ImageOps
 
 def main():
-    st.title('CWS Wildcat Example Classifier')
+    st.title('Eastern vs Western Song Sparrow Classifier')
 
     for filename in EXTERNAL_DEPENDENCIES.keys():
         download_file(filename)
     
     model = load_model()
     
-    st.markdown("Wildcat photo for classification.")
+    st.markdown("Song Sparrow spectrogram for classification.")
     image = st.file_uploader("", IMAGE_TYPES)
     if image:
         image_data = image.read()
@@ -57,7 +57,7 @@ def load_model():
     plt = platform.system()
     if plt == 'Linux' or plt == 'Darwin': 
         pathlib.WindowsPath = pathlib.PosixPath
-    inf_model = load_learner('example_cws_1.pkl', cpu=True)
+    inf_model = load_learner('song_sparrow_model.pkl', cpu=True)
     return inf_model
 
 def download_file(file_path):
@@ -93,9 +93,9 @@ def download_file(file_path):
 IMAGE_TYPES = ["png", "jpg"]
 
 EXTERNAL_DEPENDENCIES = {
-    "example_cws_1.pkl": {
-        "url": "https://drive.google.com/uc?export=download&id=100O-s83AsSy38N4sYxiLdlthL8IA8-KK",
-        "size": 179191543
+    "song_sparrow_model.pkl": {
+        "url": "https://drive.google.com/file/d/15okGOxNxcJA_vIfMXT6j4ZYftBZBuJLQ/view?usp=drive_link",
+        "size": 87519232
     }
 }
 
